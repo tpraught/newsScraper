@@ -1,0 +1,11 @@
+<button id="scrapeButton" type="submit" class="btn btn-primary">Get Articles</button>
+<div class="col-md-12">
+    <ul class="list-group">
+        {{#each headline}}
+            <li class="list-group-item">
+                <h3><a href={{this.link}} target="_new">{{this.headline}}</a><span><button type="submit" id= "save-article" class="btn btn-default float-right" data-id = {{this.id}}>Save Article</button> </span></h3>  
+                <p>{{this.summary}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</div>
